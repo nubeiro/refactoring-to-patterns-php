@@ -10,14 +10,17 @@ class Loan
      * @var float
      */
     private $commitment;
+
     /**
      * @var int
      */
     private $riskRating;
+
     /**
      * @var \DateTimeImmutable
      */
     private $maturity;
+
     /**
      * @var \DateTimeImmutable
      */
@@ -28,7 +31,7 @@ class Loan
         int $riskRating,
         \DateTimeImmutable $maturity,
         \DateTimeImmutable $expiry = null
-    ){
+    ) {
         $this->commitment = $commitment;
         $this->riskRating = $riskRating;
         $this->maturity = $maturity;

@@ -17,11 +17,22 @@ class LoanTest extends TestCase
     }
 
     public function testShortTermLoanHasLowRisk(){
+        $maturity = new \DateTimeImmutable("+1 month");
         $loan = new Loan(
             0.5,
             90,
-            new \DateTimeImmutable("1 month")
+            $maturity
         );
         $this->assertFalse($loan->isHighRisk());
     }
+
+    public function testStateBonusLoanHasLowRisk()
+    {
+        $expiry = new \DateTimeImmutable("+10 years");
+        $loan = new Loan(
+            $expiry
+        );
+        $this->assertFalse($loan->isHighRisk());
+    }
+
 }

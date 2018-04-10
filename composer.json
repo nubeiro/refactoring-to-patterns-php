@@ -1,6 +1,6 @@
 {
     "name": "nubeiro/refactoring-to-patterns-php",
-    "description": "Project to study refactors to patterns",
+    "description": "Project to study refactoring to patterns",
     "type": "project",
     "require":{
         "php" : "^7.1"
